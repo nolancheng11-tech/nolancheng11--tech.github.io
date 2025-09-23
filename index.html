@@ -7,130 +7,167 @@ AP Computer Science Principles Project
   <title>Internet Censorship - Nolan Cheng</title>
   <style>
     body {
-      margin: 0;
+      background-color: black;
+      color: #00FF00;
       font-family: monospace;
-      background-color: #000;
-      color: #00ff00;
+      margin: 0;
+      padding: 0;
     }
     header {
-      background: #000;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      left: 0;
-      border-bottom: 2px solid #00ff00;
-      z-index: 1000;
+      text-align: center;
+      padding: 2rem;
     }
     nav {
-      display: flex;
-      justify-content: center;
-      padding: 10px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #000;
+      border-bottom: 1px solid #00FF00;
+      padding: 0.5rem;
+      text-align: center;
+      z-index: 1000;
     }
     nav a {
-      color: #00ff00;
-      text-decoration: none;
+      color: #00FF00;
       margin: 0 15px;
+      text-decoration: none;
       font-weight: bold;
     }
     nav a:hover {
       text-decoration: underline;
     }
-    main {
-      padding: 80px 20px 40px;
-      max-width: 900px;
-      margin: auto;
+    section {
+      padding: 4rem 2rem;
+      margin-top: 3rem;
     }
-    h1, h2 {
-      color: #00ff00;
-      border-bottom: 1px solid #00ff00;
-      padding-bottom: 5px;
+    h2 {
+      border-bottom: 1px solid #00FF00;
+      padding-bottom: 0.5rem;
     }
-    .vocab {
+    .vocab-term {
       font-weight: bold;
-      color: #00ff00;
+      color: #00FF00;
     }
     img {
       display: block;
-      margin: 15px auto;
-      max-width: 100%;
+      margin: 1rem auto;
+      max-width: 80%;
       height: auto;
-      border: 2px solid #00ff00;
+      border: 1px solid #00FF00;
     }
     footer {
       text-align: center;
-      margin-top: 40px;
-      padding: 20px;
-      border-top: 2px solid #00ff00;
+      padding: 1rem;
+      border-top: 1px solid #00FF00;
     }
     .back-to-top {
-      color: #00ff00;
+      color: #00FF00;
       text-decoration: none;
       font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#unit1">Unit 1 Vocabulary</a>
-      <a href="#unit2">Unit 2 Vocabulary</a>
-      <a href="#censorship">Internet Censorship</a>
-    </nav>
-  </header>
 
-  <main>
-    <section id="home">
-      <h1>Nolan Cheng</h1>
-      <p><em>Future Electrical Engineer</em></p>
-      <p>After high school, I want to study Electrical Engineering and work with technology that shapes the future.</p>
-    </section>
+<nav>
+  <a href="#home">Home</a>
+  <a href="#unit1">Unit 1 Vocabulary</a>
+  <a href="#unit2">Unit 2 Vocabulary</a>
+  <a href="#censorship">Internet Censorship</a>
+</nav>
 
-    <section id="unit1">
-      <h2>Unit 1: Data</h2>
-      <p>A <span class="vocab">bit</span> is a binary digit, either 0 or 1. Eight bits form a <span class="vocab">byte</span>, which stores more information. Sometimes, data suffers from <span class="vocab">roundoff</span> when there aren’t enough bits to represent a number precisely. <span class="vocab">Analog data</span> changes smoothly over time, like sound waves, while computers store digital versions. Compression can be <span class="vocab">lossless</span>, keeping all the data, or <span class="vocab">lossy</span>, where some detail is discarded. Files often carry <span class="vocab">metadata</span>, which is data about data (like the author or file size).</p>
-      <!-- Image: Binary digits -->
-      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Binary_code.svg" alt="Binary Digits">
-      <!-- Source: Wikimedia Commons (Binary code diagram) -->
-      <!-- Image: Analog vs Digital waveform -->
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Analog_digital.svg" alt="Analog vs Digital Data">
-      <!-- Source: Wikimedia Commons (Analog vs Digital data diagram) -->
-    </section>
+<header id="home">
+  <h1>Nolan Cheng</h1>
+  <p><em>Future Electrical Engineer</em></p>
+  <p>After high school, I want to study Electrical Engineering.</p>
+</header>
 
-    <section id="unit2">
-      <h2>Unit 2: Computer Systems and Networks</h2>
-      <p>A <span class="vocab">computing device</span> like a computer or smartphone connects to a <span class="vocab">computer network</span>. Data travels along a <span class="vocab">path</span>, following a <span class="vocab">protocol</span> that defines communication rules. Networks are designed to be <span class="vocab">fault tolerant</span> and support <span class="vocab">scalability</span>. The <span class="vocab">bandwidth</span> determines the maximum data rate. A <span class="vocab">URL</span> gives a human-readable address. Beneath it all, the <span class="vocab">physical network</span> carries signals, while <span class="vocab">IP</span> assigns addresses. <span class="vocab">TCP</span> ensures reliable delivery, while <span class="vocab">UDP</span> is faster but less reliable. Messages are split into <span class="vocab">packets</span> and guided by <span class="vocab">routers</span>. The <span class="vocab">DNS</span> translates names into IP addresses, and <span class="vocab">HTTP</span> enables access to the <span class="vocab">World Wide Web (WWW)</span>.</p>
-      <!-- Image: Network packet diagram -->
-      <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/IP_stack_connections.svg" alt="Network Packet Flow">
-      <!-- Source: Wikimedia Commons (IP stack connections diagram) -->
-      <!-- Image: Router illustration -->
-      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Router_blue_icon.svg" alt="Router Illustration">
-      <!-- Source: Wikimedia Commons (Router illustration) -->
-    </section>
+<section id="unit1">
+  <h2>Unit 1: Data</h2>
+  <p><span class="vocab-term">bit</span>: A binary digit, either 0 or 1.</p>
+  <p><span class="vocab-term">byte</span>: A sequence of 8 bits.</p>
+  <p><span class="vocab-term">roundoff</span>: Error from not enough bits to represent a number precisely.</p>
+  <p><span class="vocab-term">analog data</span>: Values that change smoothly over time.</p>
+  <p><span class="vocab-term">lossless</span>: Compression that preserves all data.</p>
+  <p><span class="vocab-term">lossy</span>: Compression that discards some data.</p>
+  <p><span class="vocab-term">metadata</span>: Data about data, like descriptive info about a file.</p>
 
-    <section id="censorship">
-      <h2>Internet Censorship Around the World</h2>
-      <p>Some countries restrict internet access to control information. Here are examples:</p>
-      <ul>
-        <li><b>China</b>: Extensive censorship through the "Great Firewall," blocking many foreign websites and filtering social media.</li>
-        <li><b>Iran</b>: Social media platforms and many news outlets are restricted; the government monitors online activity.</li>
-        <li><b>North Korea</b>: Citizens have access only to a tightly controlled intranet, not the global internet.</li>
-        <li><b>Russia</b>: Increasing restrictions on news outlets, VPNs, and foreign platforms, especially during conflicts.</li>
-        <li><b>Turkey</b>: Blocks on social media during political unrest; censorship of critical journalism.</li>
-        <li><b>Saudi Arabia</b>: Restricts content deemed immoral or critical of the government; heavy monitoring of communication.</li>
-        <li><b>Vietnam</b>: Limits on dissenting political content; social media monitored closely.</li>
-        <li><b>Egypt</b>: Blocks news outlets and social media during political crises.</li>
-        <li><b>Ethiopia</b>: Internet shutdowns during protests and exams; restricted media websites.</li>
-        <li><b>Belarus</b>: Crackdowns on independent news; social media blocks during protests.</li>
-      </ul>
-      <!-- Example Image: Internet censorship protest -->
-      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Stop_censorship_sign.jpg" alt="Stop Censorship Protest">
-      <!-- Source: Wikimedia Commons (Stop censorship protest sign) -->
-    </section>
-  </main>
+  <!-- Binary digits diagram -->
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Binary_code.svg/320px-Binary_code.svg.png" alt="Binary Digits">
+  <!-- Attribution: Binary code image from Wikimedia Commons -->
 
-  <footer>
-    <a href="#home" class="back-to-top">Back to Top</a>
-  </footer>
+  <!-- Analog vs digital diagram -->
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Analog_digital.svg/320px-Analog_digital.svg.png" alt="Analog vs Digital">
+  <!-- Attribution: Analog vs Digital image from Wikimedia Commons -->
+</section>
+
+<section id="unit2">
+  <h2>Unit 2: Computer Systems and Networks</h2>
+  <p><span class="vocab-term">Computing Device</span>: A physical device that can run a program.</p>
+  <p><span class="vocab-term">Computer Network</span>: A group of interconnected computing devices.</p>
+  <p><span class="vocab-term">Path</span>: The series of connections between devices.</p>
+  <p><span class="vocab-term">Protocol</span>: Rules for how systems communicate.</p>
+  <p><span class="vocab-term">Fault Tolerant</span>: Ability to keep working even if parts fail.</p>
+  <p><span class="vocab-term">Scalability</span>: Ability of a system to expand or contract.</p>
+  <p><span class="vocab-term">Bandwidth</span>: Max transmission capacity, measured in bits per second.</p>
+  <p><span class="vocab-term">URL</span>: Human-readable web address.</p>
+  <p><span class="vocab-term">IP</span>: Assigns unique addresses and routes data.</p>
+  <p><span class="vocab-term">TCP</span>: Ensures reliable delivery of data packets.</p>
+  <p><span class="vocab-term">UDP</span>: Faster, lightweight alternative to TCP.</p>
+  <p><span class="vocab-term">Packets</span>: Small chunks of data for transmission.</p>
+  <p><span class="vocab-term">Routers</span>: Devices that forward data across networks.</p>
+  <p><span class="vocab-term">DNS</span>: Translates domain names into IP addresses.</p>
+  <p><span class="vocab-term">HTTP</span>: Protocol for transmitting web pages.</p>
+  <p><span class="vocab-term">WWW</span>: System of linked pages and media browsable via HTTP.</p>
+
+  <!-- Packet diagram -->
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/UDP_encapsulation.svg/320px-UDP_encapsulation.svg.png" alt="Packet Diagram">
+  <!-- Attribution: UDP encapsulation diagram from Wikimedia Commons -->
+
+  <!-- Router diagram -->
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Network_router.svg/320px-Network_router.svg.png" alt="Router Diagram">
+  <!-- Attribution: Router diagram from Wikimedia Commons -->
+</section>
+
+<section id="censorship">
+  <h2>Internet Censorship Around the World</h2>
+  <p>Many countries restrict internet access. Below are examples:</p>
+
+  <h3>China</h3>
+  <p>Extensive filtering with the "Great Firewall" that blocks foreign websites and services.</p>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Great_Firewall_China.svg/320px-Great_Firewall_China.svg.png" alt="Great Firewall China">
+  <!-- Attribution: Great Firewall diagram from Wikimedia Commons -->
+
+  <h3>Iran</h3>
+  <p>Government blocks many social media platforms and monitors online activity.</p>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Tehran_Skyline.jpg/320px-Tehran_Skyline.jpg" alt="Tehran Skyline">
+  <!-- Attribution: Tehran skyline photo from Wikimedia Commons -->
+
+  <h3>Russia</h3>
+  <p>Increasing control over internet traffic and restrictions on political content.</p>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Moscow_City_skyline.jpg/320px-Moscow_City_skyline.jpg" alt="Moscow Skyline">
+  <!-- Attribution: Moscow skyline photo from Wikimedia Commons -->
+
+  <h3>North Korea</h3>
+  <p>Public access to the global internet is nearly nonexistent; only a domestic intranet exists.</p>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Pyongyang_May_Day_Stadium.jpg/320px-Pyongyang_May_Day_Stadium.jpg" alt="Pyongyang Stadium">
+  <!-- Attribution: Pyongyang stadium photo from Wikimedia Commons -->
+
+  <h3>Saudi Arabia</h3>
+  <p>Strict filtering of political, social, and religious content online.</p>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Riyadh_Skyline.jpg/320px-Riyadh_Skyline.jpg" alt="Riyadh Skyline">
+  <!-- Attribution: Riyadh skyline photo from Wikimedia Commons -->
+
+  <h3>Vietnam</h3>
+  <p>Government censors political speech and restricts press freedom online.</p>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Ho_Chi_Minh_City_Skyline.jpg/320px-Ho_Chi_Minh_City_Skyline.jpg" alt="Ho Chi Minh City Skyline">
+  <!-- Attribution: Ho Chi Minh City skyline photo from Wikimedia Commons -->
+
+</section>
+
+<footer>
+  <a href="#home" class="back-to-top">Back to Top</a>
+</footer>
+
 </body>
 </html>
